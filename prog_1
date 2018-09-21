@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,n,s[100],sum=0;
+    printf("\nHow many numbers do u want to add?\n");
+    scanf("%d",&n);
+    printf("\nEnter the numbers to be added\n");
+    for(i=0;i<n;i++)
+      scanf("%d",&s[i]);
+    printf("\nThe entered numbers are: \n");
+    for(i=0;i<n;i++)
+      printf("%d\n",s[i]);
+    printf("\nThe addition of the enetered numbers is: \n");
+    for(i=0;i<n;i++)
+      sum=sum+s[i];
+    printf("%d",sum);
+    return 0;
+}
