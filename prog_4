@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,n;
+    float s[100],result,sum=0;
+    printf("\nHow many square roots do you want to add?\n");
+    scanf("%d",&n);
+    printf("\nEnter the numbers whose square roots you want to add\n");
+    for(i=0;i<n;i++)
+      scanf("%f",&s[i]);
+    printf("\nThe entered numbers are: \n");
+    for(i=0;i<n;i++)
+      printf("%f\n",s[i]);
+    printf("\nThe sum of the square roots of the numbers are: \n");
+    for(i=0;i<n;i++)
+    {
+        result=sqrt(s[i]);
+        sum=sum+result;
+    }
+    printf("%f",sum);
+
+    return 0;
+}
