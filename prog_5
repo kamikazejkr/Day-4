@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,n,s[100],smallest;
+    printf("\nHow many numbers do you want to compare?\n");
+    scanf("%d",&n);
+    printf("\nEnter the numbers which you want to compare\n");
+    for(i=0;i<n;i++)
+      scanf("%d",&s[i]);
+    printf("\nThe entered numbers are: \n");
+    for(i=0;i<n;i++)
+      printf("%d\n",s[i]);
+      smallest=s[0];
+    for(i=0;i<n;i++)
+    {
+        if(s[i]<smallest)
+          smallest=s[i];
+    }
+    printf("\nThe smallest of %d numbers is: %d\n",n,smallest);
+
+    return 0;
+}
