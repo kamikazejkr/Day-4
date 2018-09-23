@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int i,j,n,s[100],smallest1,smallest2;
+    printf("\nHow many numbers do you want to compare?\n");
+    scanf("%d",&n);
+    printf("\nEnter the numbers which you want to compare\n");
+    for(i=0;i<n;i++)
+      scanf("%d",&s[i]);
+    printf("\nThe entered numbers are: \n");
+    for(i=0;i<n;i++)
+      printf("%d\n",s[i]);
+    smallest1=s[0];
+    smallest2=s[0+1];
+    for(i=0;i<n;i++)
+    {
+        if(s[i]<smallest1)
+          smallest1=s[i];
+    }
+    for(j=2;j<n;j++)
+    {
+        if(smallest1==s[j])
+          break;
+        if(s[j]<smallest2)
+          smallest2=s[j];
+    }
+    printf("\nThe smallest and second smallest of %d numbers is: %d and %d respectively\n",n,smallest1,smallest2);
+
+    return 0;
+}
